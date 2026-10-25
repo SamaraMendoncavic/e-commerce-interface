@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sensly: moda para todos os sentidos. Encontre roupas com descrições detalhadas e uma experiência de compra acessível.">
+  <title>Sensly — Moda para todos os sentidos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo principal</a>
+  <header class="site-header">
+    <a class="logo" href="#" aria-label="Sensly — página inicial">sensly</a>
+    <nav class="main-nav" aria-label="Navegação principal">
+      <a class="active" href="#inicio" aria-current="page">Início</a>
+      <a href="#produtos">Roupas</a>
+      <a href="#categorias">Categorias</a>
+      <a href="#acessibilidade">Acessibilidade</a>
+    </nav>
+    <form class="search" role="search" id="search-form">
+      <label class="sr-only" for="search-input">Buscar roupas</label>
+      <input id="search-input" type="search" placeholder="Buscar roupas">
+      <button type="submit" aria-label="Buscar"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg></button>
+    </form>
+    <div class="header-actions">
+      <button class="text-action" id="account-button"><span aria-hidden="true">♙</span> Minha conta</button>
+      <button class="text-action" id="cart-open"><span aria-hidden="true">▣</span> Carrinho <span class="cart-count" id="cart-count">0</span></button>
+    </div>
+    <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="mobile-nav">Menu</button>
+  </header>
+  <nav id="mobile-nav" class="mobile-nav" aria-label="Navegação móvel" hidden>
+    <a href="#inicio">Início</a><a href="#produtos">Roupas</a><a href="#categorias">Categorias</a><a href="#acessibilidade">Acessibilidade</a>
+  </nav>
+
+  <main id="conteudo">
+    <section class="hero section-wrap" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Seu estilo. Do seu jeito.</p>
+        <h1 id="hero-title">Moda para todos os sentidos.</h1>
+        <p>Descubra roupas com descrições detalhadas, informações sobre tecidos e uma experiência de compra pensada para você.</p>
+        <a class="button primary" href="#produtos">Explorar roupas</a>
+      </div>
+      <img class="hero-image" src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1400&q=85" alt="Modelos usando roupas contemporâneas em uma composição de moda">
+    </section>
+
+    <section class="section-wrap categories-section" id="categorias" aria-labelledby="categories-title">
+      <div class="section-heading">
+        <h2 id="categories-title">Encontre o seu próximo essencial</h2>
+        <p>Explore por categoria.</p>
+      </div>
+      <div class="category-grid">
+        <a class="category-card" href="#produtos" data-category="Camisetas"><img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=700&q=80" alt="Camiseta branca de algodão"><span>Camisetas <span aria-hidden="true">↗</span></span></a>
+        <a class="category-card" href="#produtos" data-category="Calças"><img src="https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=700&q=80" alt="Calça jeans azul"><span>Calças <span aria-hidden="true">↗</span></span></a>
+        <a class="category-card" href="#produtos" data-category="Vestidos"><img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=700&q=80" alt="Vestido casual em tom terracota"><span>Vestidos <span aria-hidden="true">↗</span></span></a>
+        <a class="category-card" href="#produtos" data-category="Jaquetas"><img src="https://images.unsplash.com/photo-1548126032-079a0fb0099d?auto=format&fit=crop&w=700&q=80" alt="Jaqueta leve em tom neutro"><span>Jaquetas <span aria-hidden="true">↗</span></span></a>
+      </div>
+    </section>
+
+    <section class="section-wrap products-section" id="produtos" aria-labelledby="products-title">
+      <div class="section-heading stacked">
+        <h2 id="products-title">Produtos em destaque</h2>
+        <p>Peças versáteis, com cada detalhe descrito para você escolher com confiança.</p>
+      </div>
+      <p id="results-message" class="results-message" aria-live="polite"></p>
+      <div class="product-grid" id="product-grid">
+        <article class="product-card" data-name="Camiseta básica" data-category="Camisetas" data-price="59.90">
+          <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=85" alt="Camiseta básica branca, manga curta e gola redonda, fotografada sobre fundo neutro">
+          <h3>Camiseta básica</h3><p>Branco natural, corte reto e gola redonda. Malha 100% algodão.</p><strong>R$ 59,90</strong>
+          <button class="button product-button" data-add="Camiseta básica" data-price="59.90">Adicionar ao carrinho</button>
+          <button class="details-link" data-details="Camiseta básica|Branco natural|Malha 100% algodão|Corte reto, manga curta e gola redonda.|R$ 59,90">Ver detalhes</button>
+        </article>
+        <article class="product-card" data-name="Calça reta" data-category="Calças" data-price="119.90">
+          <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=800&q=85" alt="Calça reta azul-marinho em tecido jeans, vista de frente">
+          <h3>Calça reta</h3><p>Azul-marinho, cintura média e bolsos laterais. Sarja de algodão.</p><strong>R$ 119,90</strong>
+          <button class="button product-button" data-add="Calça reta" data-price="119.90">Adicionar ao carrinho</button>
+          <button class="details-link" data-details="Calça reta|Azul-marinho|Sarja de algodão|Cintura média, pernas de corte reto e bolsos laterais.|R$ 119,90">Ver detalhes</button>
+        </article>
+        <article class="product-card" data-name="Vestido casual" data-category="Vestidos" data-price="139.90">
+          <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=800&q=85" alt="Vestido casual terracota, com mangas curtas e saia midi">
+          <h3>Vestido casual</h3><p>Terracota, comprimento midi e mangas curtas. Viscose de toque macio.</p><strong>R$ 139,90</strong>
+          <button class="button product-button" data-add="Vestido casual" data-price="139.90">Adicionar ao carrinho</button>
+          <button class="details-link" data-details="Vestido casual|Terracota|Viscose de toque macio|Comprimento midi, mangas curtas e caimento leve.|R$ 139,90">Ver detalhes</button>
+        </article>
+        <article class="product-card" data-name="Jaqueta leve" data-category="Jaquetas" data-price="179.90">
+          <img src="https://images.unsplash.com/photo-1548126032-079a0fb0099d?auto=format&fit=crop&w=800&q=85" alt="Jaqueta leve bege com fechamento frontal por zíper">
+          <h3>Jaqueta leve</h3><p>Bege, corte reto e fechamento por zíper. Nylon leve com bolsos.</p><strong>R$ 179,90</strong>
+          <button class="button product-button" data-add="Jaqueta leve" data-price="179.90">Adicionar ao carrinho</button>
+          <button class="details-link" data-details="Jaqueta leve|Bege|Nylon leve|Corte reto, fechamento frontal por zíper e bolsos laterais.|R$ 179,90">Ver detalhes</button>
+        </article>
+      </div>
+      <p class="empty-state" id="empty-state" hidden>Nenhum produto encontrado. Tente buscar por outra palavra.</p>
+    </section>
+
+    <section class="accessibility-section" id="acessibilidade" aria-labelledby="access-title">
+      <div class="section-wrap access-grid">
+        <div class="access-intro"><h2 id="access-title">Moda com mais autonomia</h2><p>Escolher o que vestir deve ser uma experiência sua, do início ao fim.</p><a href="#footer">Conheça nossa acessibilidade</a></div>
+        <article class="access-feature"><span class="feature-icon" aria-hidden="true">≡</span><h3>Detalhes que importam</h3><p>Descrições de cores, cortes e tecidos para conhecer cada peça.</p></article>
+        <article class="access-feature"><span class="feature-icon" aria-hidden="true">⌘</span><h3>Navegação clara</h3><p>Categorias organizadas e rótulos diretos em cada etapa.</p></article>
+        <article class="access-feature"><span class="feature-icon text-icon" aria-hidden="true">T</span><h3>Leitura confortável</h3><p>Textos legíveis e bom contraste para uma escolha mais tranquila.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="footer">
+    <div class="section-wrap footer-top"><div><a class="logo" href="#inicio">sensly</a><p>Moda para todos os sentidos</p></div><nav aria-label="Links do rodapé"><a href="#footer">Sobre</a><a href="#acessibilidade">Acessibilidade</a><a href="mailto:ajuda@sensly.example">Ajuda</a><a href="#footer">Trocas</a><a href="#footer">Privacidade</a></nav></div>
+    <div class="section-wrap copyright">© 2026 Sensly. Todos os direitos reservados.</div>
+  </footer>
+
+  <dialog id="details-dialog" aria-labelledby="dialog-title"><button class="dialog-close" aria-label="Fechar detalhes">×</button><p class="eyebrow">Detalhes do produto</p><h2 id="dialog-title"></h2><dl id="dialog-content"></dl><button class="button primary" id="dialog-add">Adicionar ao carrinho</button></dialog>
+  <dialog id="cart-dialog" aria-labelledby="cart-title"><button class="dialog-close" aria-label="Fechar carrinho">×</button><h2 id="cart-title">Seu carrinho</h2><div id="cart-items"></div><p class="cart-total" id="cart-total">Total: R$ 0,00</p><p class="note">Demonstração de interface: nenhum pedido ou pagamento será realizado.</p><button class="button primary" id="continue-shopping">Continuar comprando</button></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
